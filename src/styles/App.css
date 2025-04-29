@@ -434,32 +434,12 @@ figure {
 	/* ----------- NAV ---------------------------------------------- */
 	.primary-header {
 		display: grid; /* Switch to grid for vertical stacking */
-		grid-template-columns: 1fr; /* Single column layout */
 		justify-items: center; /* Center items horizontally (including logo) */
 		align-items: start; /* Align items to the top of their grid area */
 	}
 
 	.primary-header .logo-link img {
-		/* Optional: Override centering to left-align logo */
-		justify-self: center;
 		margin-top: 0.4rem;
-	}
-
-	nav {
-		width: 50%; /* Make navigation take full width */
-	}
-
-	nav ul {
-		display: flex; /* Arrange links in a horizontal row */
-		justify-content: space-around; /* Distribute space around links */
-		align-items: center; /* Vertically align links */
-		padding: 0;
-	}
-
-	nav li {
-		margin-left: 0;
-		margin-right: 0;
-		text-align: center; /* Center text within links */
 	}
 
 	nav a {
