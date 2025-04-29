@@ -433,19 +433,34 @@ figure {
 
 	/* ----------- NAV ---------------------------------------------- */
 	.primary-header {
-		display: grid; /* Switch to grid for vertical stacking */
-		justify-items: center; /* Center items horizontally (including logo) */
-		align-items: start; /* Align items to the top of their grid area */
+		display: flex; /* Switch to flexbox for centering */
+		flex-direction: column; /* Stack logo and navigation vertically */
+		align-items: center; /* Center items horizontally */
 	}
 
 	.primary-header .logo-link img {
 		margin-top: 0.4rem;
+		margin-bottom: 1rem; /* Add some space below the logo */
+	}
+
+	.primary-header nav ul {
+		list-style: none;
+		padding: 0;
+		display: flex; /* Keep flexbox for horizontal link layout */
+		justify-content: center; /* Center the links horizontally */
+		align-items: center;
+		flex-wrap: wrap; /* Allow links to wrap to the next line if needed */
+		gap: 1rem; /* Adjust spacing between links */
+	}
+
+	.primary-header nav li {
+		margin-left: 0; /* Remove default left margin */
 	}
 
 	nav a {
 		font-size: var(--fs-300);
 		display: block; /* Make the whole link clickable */
-		padding: 0.2rem; /* Add padding for touch targets */
+		padding: 0.5rem 1rem; /* Increase padding for touch targets */
 		white-space: nowrap; /* Prevent link text wrapping */
 	}
 
