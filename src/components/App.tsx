@@ -9,6 +9,7 @@ const background: Record<string, string> = {
 	'/': 'bg-overlay1',
 	'/about': 'bg-overlay1',
 	'/projects': 'bg-overlay2',
+	'/contact': 'bg-overlay3',
 }
 
 function Layout() {
