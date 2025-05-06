@@ -64,7 +64,7 @@
 
 	/* Secondary Color Palette */
 	--clr-secondary-300: hsl(0, 0%, 100%);
-	--clr-secondary-400: hsl(256, 17%, 69%);
+	--clr-secondary-400: hsl(230, 60%, 94%);
 	--clr-secondary-500: hsl(270, 13%, 53%);
 
 	/* Accent Color Palette */
@@ -181,6 +181,15 @@ figure {
 	background:
 		var(--overlay-gradient),
 		url('/background/pexels-nguyendesigner-13162091.jpg'); /* Gradient over image */
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+.bg-overlay3 {
+	background:
+		var(--overlay-gradient), url('/background/pexels-andrew-2312369.jpg'); /* Gradient over image */
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
@@ -331,11 +340,36 @@ figure {
 	text-align: justify;
 }
 
+/* Center the social media icons */
+.section-secondary .description > a {
+	display: inline-flex; /* Use inline-flex to control alignment of icon and potential text */
+	align-items: center; /* Vertically center the icon */
+	margin-top: 1rem;
+	margin-right: 2rem; /* Add some spacing between the icons */
+	font-size: 1.7em; /* Adjust the size of the icons */
+	color: var(--clr-primary-300); /* Use your primary color */
+	transition: color 0.3s ease; /* Add a smooth transition for hover effect */
+	text-decoration: none; /* Remove underline from links */
+}
+
+.section-secondary .description > a:last-child {
+	margin-right: 0; /* Remove margin from the last icon */
+}
+
+.section-secondary .description > a:hover {
+	color: var(--clr-primary-500); /* Change color on hover */
+}
+
 .section-secondary img {
 	width: 100%; /* Make the image fill its column */
 	height: auto; /* Maintain aspect ratio */
 	border-radius: 2rem;
 	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow */
+}
+
+.section-secondary .contact {
+	width: 80%; /* Make the image fill its column */
+	height: auto; /* Maintain aspect ratio */
 }
 
 /* Animation */
@@ -425,6 +459,62 @@ figure {
 	font-size: var(--fs-400);
 }
 
+/* ---------- CONTACT FORM STYLES ----------------------------------- */
+.contact-form {
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	width: 100%;
+	padding: 2rem;
+	border-radius: 8px;
+	background-color: var(--clr-secondary-400);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+	display: flex;
+	flex-direction: column;
+}
+
+.form-label {
+	font-size: var(--fs-400);
+	color: var(--clr-primary-500);
+	margin-bottom: 0.5rem;
+}
+
+.form-input,
+.form-textarea {
+	padding: 0.75rem;
+	border: 1px solid var(--clr-secondary-500);
+	border-radius: 4px;
+	font-size: var(--fs-300);
+	color: var(--clr-primary-500);
+	background-color: var(--bg-background-secondary);
+}
+
+.form-textarea {
+	resize: vertical; /* Allow vertical resizing of the textarea */
+}
+
+.form-button {
+	padding: 0.75rem 1.5rem;
+	background-color: var(--clr-primary-300);
+	color: var(--clr-secondary-300);
+	border: none;
+	border-radius: 4px;
+	font-size: var(--fs-400);
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+	background-color: var(--clr-primary-400);
+}
+
+.img-50 {
+	width: 20%;
+	height: 20%;
+}
 /* ---------- RESPONSIVE STYLES (SMALL SCREENS) ----------------- */
 @media (max-width: 590px) {
 	.content-grid {
@@ -522,5 +612,14 @@ figure {
 	}
 	.section-third h3 {
 		font-size: var(--fs-200);
+	}
+
+	/* Center the social media icons */
+	.section-secondary .description > a {
+		margin-bottom: 1rem;
+	}
+
+	.contact-form {
+		padding: 1.5rem;
 	}
 }
