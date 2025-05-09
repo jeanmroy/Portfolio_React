@@ -228,6 +228,10 @@ function About() {
 									<SiNodedotjs className="skill-icon" />
 									Node.js
 								</li>
+								<li>
+									<SiNodedotjs className="skill-icon" />
+									Express.js
+								</li>
 							</ul>
 						</div>
 
