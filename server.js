@@ -32,7 +32,9 @@ app.use(express.static(path.join(__dirname, 'dist')))
 
 app.use('/api/contact/send', limiter) // Apply rate limiting to the email sending endpoint
 
-app.use(helmet()) // Set security-related HTTP headers
+if (process.env.NODE_ENV === 'production') {
+	app.use(helmet())
+}
 
 // Endpoint to handle sending emails
 app.post(
