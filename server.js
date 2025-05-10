@@ -14,7 +14,7 @@ const port = process.env.PORT || 3000
 
 const limiter = rateLimit({
 	windowMs: 60 * 1000,
-	max: 3,
+	max: 2, // requests per minute
 	message: { error: 'Too many requests. Please try again later.' },
 	handler: (req, res, next, options) => {
 		console.warn(`Rate limit exceeded for IP: ${req.ip}`)
@@ -33,7 +33,8 @@ app.use(express.static(path.join(__dirname, 'dist')))
 app.use('/api/contact/send', limiter) // Apply rate limiting to the email sending endpoint
 
 if (process.env.NODE_ENV === 'production') {
-	app.use(helmet())
+	app.use(helmet()) // Sets secure HTTP headers
+	app.set('trust proxy', 1) // Trusts reverse proxy for correct IP (e.g., for rate limiting)
 }
 
 // Endpoint to handle sending emails
