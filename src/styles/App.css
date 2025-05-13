@@ -495,18 +495,30 @@ figure {
 		background:
 			var(--overlay-gradient),
 			url('/background/pexels-cottonbro-5054213-smaller.webp'); /* Gradient over image */
+		background-size: contain;
+		background-position: top center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
 	}
 
 	.bg-overlay2 {
 		background:
 			var(--overlay-gradient),
 			url('/background/pexels-nguyendesigner-13162091-smaller.webp'); /* Gradient over image */
+		background-size: contain;
+		background-position: top center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
 	}
 
 	.bg-overlay3 {
 		background:
 			var(--overlay-gradient),
 			url('/background/pexels-andrew-2312369-smaller.webp'); /* Gradient over image */
+		background-size: contain;
+		background-position: top center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
 	}
 
 	/* ----------- NAV ---------------------------------------------- */
@@ -609,5 +621,32 @@ figure {
 
 	.contact-form {
 		padding: 1.5rem;
+	}
+}
+
+@media (max-width: 420px) {
+	/* ----------- BACKGROUND ---------------------------------------------- */
+	.bg-overlay1 {
+		background:
+			var(--overlay-gradient),
+			url('/background/pexels-cottonbro-5054213-smaller.webp'); /* Gradient over image */
+		background-size: cover;
+		background-position: top;
+	}
+
+	.bg-overlay2 {
+		background:
+			var(--overlay-gradient),
+			url('/background/pexels-nguyendesigner-13162091-smaller.webp'); /* Gradient over image */
+		background-size: cover;
+		background-position: top;
+	}
+
+	.bg-overlay3 {
+		background:
+			var(--overlay-gradient),
+			url('/background/pexels-andrew-2312369-smaller.webp'); /* Gradient over image */
+		background-size: contain;
+		background-position: top;
 	}
 }
