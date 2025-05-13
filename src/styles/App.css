@@ -490,6 +490,25 @@ figure {
 		--padding-inline: 0.5rem;
 	}
 
+	/* ----------- BACKGROUND ---------------------------------------------- */
+	.bg-overlay1 {
+		background:
+			var(--overlay-gradient),
+			url('/background/pexels-cottonbro-5054213-smaller.webp'); /* Gradient over image */
+	}
+
+	.bg-overlay2 {
+		background:
+			var(--overlay-gradient),
+			url('/background/pexels-nguyendesigner-13162091-smaller.webp'); /* Gradient over image */
+	}
+
+	.bg-overlay3 {
+		background:
+			var(--overlay-gradient),
+			url('/background/pexels-andrew-2312369-smaller.webp'); /* Gradient over image */
+	}
+
 	/* ----------- NAV ---------------------------------------------- */
 	.primary-header {
 		display: flex; /* Switch to flexbox for centering */
